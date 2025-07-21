@@ -1,1 +1,2 @@
-web: gunicorn django attendance.wsgi
+gunicorn sign_in_system.wsgi:application
+
