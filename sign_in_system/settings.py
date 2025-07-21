@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'sign_in_system.wsgi.application'
 # Using dj-database-url and defaulting to SQLite
 DATABASES = {
     'default': dj_database_url.config(
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
+        default=config('DATABASE_URL', default='sqlite:///db.sqlite3'),
         conn_max_age=600
     )
 }
