@@ -67,9 +67,10 @@ WSGI_APPLICATION = 'sign_in_system.wsgi.application'
 # Using dj-database-url and defaulting to SQLite
 
 DATABASES = {
-    'default': dj_database_url.config(
+    'default': dj_database_url.parse(config(
+        'DATABASE_URL',
         default=f"sqlite:///{os.path.join(BASE_DIR, 'db.sqlite3')}"
-    )
+    ))
 }
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
