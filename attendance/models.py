@@ -11,7 +11,6 @@ class Attendance(models.Model):
     ]
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
-    timestamp = models.DateTimeField(default=timezone.now)
 
     date = models.DateField(auto_now_add=True)
     check_in = models.TimeField(null=True, blank=True)
@@ -20,4 +19,4 @@ class Attendance(models.Model):
     remarks = models.TextField(blank=True)
 
     def __str__(self):
-        return f"{self.user} - {self.timestamp}"
+        return f"{self.user.username} on {self.date}"

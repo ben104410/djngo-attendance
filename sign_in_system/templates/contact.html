@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Attendance Tracker{% endblock %}
+
+{% block content %}
+<style>
+    /* Custom styles for the icon containers */
+    .icon-square {
+        width: 48px;
+        height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        border-radius: .5rem; /* A slightly rounded square */
+    }
+</style>
+
+<div class="container py-5 my-4">
+    <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+        <h1 class="display-5 fw-bold">Get in Touch</h1>
+        <p class="lead text-muted">
+            Have a question or feedback? We'd love to hear from you. Fill out the form below, and we'll get back to you as soon as possible.
+        </p>
+    </div>
+
+    <div class="row g-5 justify-content-center">
+        <div class="col-lg-8">
+            <div class="row g-4">
+                <!-- Contact Information -->
+                <div class="col-md-4">
+                    <div class="text-center p-4 h-100">
+                        <div class="icon-square bg-primary text-white mx-auto mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="fw-bold">Our Office</h5>
+                        <p class="text-muted">kiwandani, Kilifi 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 h-100">
+                        <div class="icon-square bg-primary text-white mx-auto mb-3">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5 class="fw-bold">Email Us</h5>
+                        <p class="text-muted">bentitus143@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 h-100">
+                        <div class="icon-square bg-primary text-white mx-auto mb-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h5 class="fw-bold">Call Us</h5>
+                        <p class="text-muted">+254795317428</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-12 mt-5">
+                    <h3 class="text-center mb-4 fw-bold">Send a Message</h3>
+                    <form>
+                        <!-- In a real application, you would render a Django form here -->
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating"><input type="text" class="form-control" id="name" placeholder="Your Name"><label for="name">Your Name</label></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating"><input type="email" class="form-control" id="email" placeholder="Your Email"><label for="email">Your Email</label></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating"><input type="text" class="form-control" id="subject" placeholder="Subject"><label for="subject">Subject</label></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating"><textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea><label for="message">Message</label></div>
+                            </div>
+                            <div class="col-12"><button class="btn btn-primary w-100 py-3" type="submit">Send Message</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

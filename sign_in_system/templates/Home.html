@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Welcome to Attendance Tracker{% endblock %}
+
+{% block content %}
+<style>
+    /* A few custom styles to enhance the look */
+    .hero-section {
+        background-color: #f8f9fa;
+        padding: 6rem 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        color: var(--bs-primary, #0d6efd);
+    }
+
+    .cta-section {
+        background-color: var(--bs-dark, #212529);
+    }
+</style>
+
+<!-- Hero Section -->
+<div class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Modern Attendance Tracking, Simplified.</h1>
+        <p class="lead text-muted my-4">
+            Streamline how you manage attendance for your organization with our intuitive and powerful platform.
+        </p>
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-2 mb-2 mb-md-0">Get Started</a>
+        <a href="#features" class="btn btn-outline-secondary btn-lg mb-2 mb-md-0">Learn More</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div id="features" class="container py-5 my-4">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Why Choose Attendance Tracker?</h2>
+        <p class="lead text-muted">Everything you need to manage attendance efficiently.</p>
+    </div>
+    <div class="row g-4 text-center">
+        <div class="col-md-6 col-lg-3">
+            <div class="mb-3">
+                <i class="fas fa-tachometer-alt feature-icon"></i>
+            </div>
+            <h5 class="fw-bold">Real-time Dashboard</h5>
+            <p class="text-muted">Monitor attendance as it happens with a live, easy-to-read dashboard.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="mb-3">
+                <i class="fas fa-file-invoice feature-icon"></i>
+            </div>
+            <h5 class="fw-bold">Automated Reports</h5>
+            <p class="text-muted">Generate insightful daily, weekly, or monthly reports with just a few clicks.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="mb-3">
+                <i class="fas fa-user-check feature-icon"></i>
+            </div>
+            <h5 class="fw-bold">Easy Check-in/out</h5>
+            <p class="text-muted">Allow members to check in and out quickly using any device.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="mb-3">
+                <i class="fas fa-cloud-shield-alt feature-icon"></i>
+            </div>
+            <h5 class="fw-bold">Secure & Reliable</h5>
+            <p class="text-muted">Your data is safe with us, stored securely and backed up regularly.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="cta-section text-white text-center py-5">
+    <div class="container">
+        <h2 class="display-5 fw-bold">Ready to Transform Your Workflow?</h2>
+        <p class="lead my-4">
+            Join hundreds of organizations already streamlining their attendance tracking.
+        </p>
+        <a href="{% url 'register' %}" class="btn btn-light btn-lg">Create Your Account Now</a>
+    </div>
+</div>
+
+{% endblock %}

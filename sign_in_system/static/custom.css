@@ -1,0 +1,45 @@
+/* static/css/custom.css */
+
+/* --- Footer Styles --- */
+.footer-dark {
+    background-color: #628db8; /* Bootstrap's dark color */
+    color: rgba(97, 57, 143, 0.75);
+}
+
+.footer-dark h5 {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer-dark .footer-links a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-dark .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-social a {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-right: 15px;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-copyright a {
+    color: #817474;
+    font-weight: bold;
+}

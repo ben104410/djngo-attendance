@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Attendance Tracker{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    <!-- Page Header -->
+    <div class="page-header text-center">
+        <h1>About Our System</h1>
+        <p class="lead text-muted">Our mission is to provide a simple, intuitive, and reliable platform for organizations to manage and monitor attendance.</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mt-5 mb-5">
+        <!-- Feature 1 -->
+        <div class="col-lg-4 d-flex align-items-stretch mb-4">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="bi bi-calendar-check"></i>
+                </div>
+                <h3>Automated Tracking</h3>
+                <p>Our system automatically records sign-ins and sign-outs, reducing manual work and minimizing errors.</p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-lg-4 d-flex align-items-stretch mb-4">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <h3>Real-time Reporting</h3>
+                <p>Generate insightful reports on attendance trends, tardiness, and more, all in real-time.</p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-lg-4 d-flex align-items-stretch mb-4">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <h3>Secure & Reliable</h3>
+                <p>Built with security in mind, ensuring that all your attendance data is safe, secure, and always available.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="page-header text-center mt-5 mb-5">
+        <h2>Meet The Team</h2>
+        <p class="lead text-muted">The dedicated individuals behind the Attendance Tracker.</p>
+    </div>
+
+    <div class="row">
+        <!-- Team Member 1 (Example) -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="team-card">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Team Member Photo" class="img-fluid rounded-circle mb-3">
+                <h5>Jane Doe</h5>
+                <p class="team-role">Lead Developer</p>
+                <p class="text-muted small">With a passion for clean code and user-centric design, Jane led the development of the core system.</p>
+            </div>
+        </div>
+
+        <!-- Team Member 2 (Example) -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="team-card">
+                <img src="https://i.pravatar.cc/150?img=2" alt="Team Member Photo" class="img-fluid rounded-circle mb-3">
+                <h5>John Smith</h5>
+                <p class="team-role">UI/UX Designer</p>
+                <p class="text-muted small">John crafted the intuitive and appealing user interface you see today.</p>
+            </div>
+        </div>
+
+        <!-- Team Member 3 (Example) -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="team-card">
+                <img src="https://i.pravatar.cc/150?img=3" alt="Team Member Photo" class="img-fluid rounded-circle mb-3">
+                <h5>Alex Johnson</h5>
+                <p class="team-role">Project Manager</p>
+                <p class="text-muted small">Alex ensured the project stayed on track, delivering a high-quality product on time.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

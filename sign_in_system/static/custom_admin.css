@@ -1,0 +1,31 @@
+/* static/custom_admin.css */
+
+#footer {
+    background-color: #212529; /* A dark grey, similar to your custom.css */
+    color: rgba(255, 255, 255, 0.75);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    height: auto; /* Override default height if any */
+    line-height: 1.5;
+}
+
+#footer .container {
+    width: auto;
+    padding: 0 20px;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#footer a {
+    color: #a9d1f8;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+

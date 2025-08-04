@@ -1,0 +1,47 @@
+{% load static %}
+
+<footer class="mt-auto bg-dark text-white">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <!-- About Section -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0 text-center text-md-start">
+                <h5 class="text-uppercase fw-bold">Attendance Tracker</h5>
+                <p class="small">
+                    An efficient and modern way to track attendance for your staff, students, or community members.
+                </p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase fw-bold">Quick Links</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="{% url 'home' %}" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="{% url 'contact' %}" class="text-white text-decoration-none">Contact</a></li>
+                    {% if not user.is_authenticated %}
+                    <li><a href="{% url 'login' %}" class="text-white text-decoration-none">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase fw-bold">Follow Us</h5>
+                <p class="small">Stay connected with us on social media.</p>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=100072246157373" class="text-white me-3" title="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="Check out @benjah (@benjah1031282): https://x.com/benjah1031282?t=PPsqAqG-eGQzOlVj0RdTOQ&s=08" class="text-white me-3" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="https://www.instagram.com/bentitus99?igsh=YzljYTk1ODg3Zg" class="text-white me-3" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/benjamin-mwasya-872505365" target="_blank" class="text-white me-3" title="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    <a href="https://github.com/ben10441044" target="_blank" class="text-white" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © {% now "Y" %} Copyright:
+        <a class="text-white text-decoration-none" href="{% url 'home' %}">AttendanceTracker.com</a>
+    </div>
+</footer>

@@ -7,4 +7,3 @@ urlpatterns = [
     path('logout/', views.logout_user, name='logout'),
    
 ]
-from django.urls import include, path

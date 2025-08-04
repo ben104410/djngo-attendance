@@ -5,7 +5,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
 
 User = get_user_model()
 
@@ -23,7 +22,7 @@ def register_user(request):
 
         user = User.objects.create_user(username=username, password=password, email=email)
         login(request, user)
-        return redirect('dashboard')  # change to your actual dashboard route
+        return redirect('attendance_dashboard')
 
     return render(request, 'users/register.html')
 
@@ -37,7 +36,7 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            return redirect('dashboard')  # or some protected route
+            return redirect('attendance_dashboard')
         else:
             messages.error(request, 'Invalid username or password.')
             return redirect('login')

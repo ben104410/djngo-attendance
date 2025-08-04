@@ -1,0 +1,151 @@
+/* static/styles.css */
+
+:root {
+    --primary-color: #4A90E2;      /* A professional, softer blue */
+    --primary-hover: #357ABD;      /* A darker shade for hover states */
+    --secondary-color: #6c757d;
+    --accent-color: #F5A623;       /* A warm accent for important elements */
+    --light-bg: #F7F9FC;          /* A very light, clean background */
+    --dark-bg: #343a40;           /* A dark charcoal for footers/contrast */
+    --card-bg: #FFFFFF;
+    --text-dark: #333333;         /* Dark grey for readability */
+    --text-light: #f8f9fa;
+    --border-color: #E0E6ED;      /* A softer border color */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* --- Animations --- */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- General Body and Base Styles --- */
+body {
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+main.container {
+    flex: 1;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* --- Navbar Customization --- */
+.navbar {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* --- Page Content Styles --- */
+.hero-section {
+    background-color: var(--card-bg);
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+.card-custom {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* About and Contact Page Styles */
+.page-header {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 2rem;
+}
+
+/* --- Form Enhancements --- */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25); /* Use primary color with alpha */
+    outline: 0;
+}
+
+/* Form Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 25px;
+    border-radius: 25px; /* Pill-shaped buttons */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Footer Styles --- */
+.footer-main {
+    background-color: var(--dark-bg);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 3rem 0 1.5rem;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.footer-main h5 {
+    color: var(--text-light);
