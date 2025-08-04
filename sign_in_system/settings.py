@@ -12,7 +12,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-bhy5wkp17_#3v*lkn@^$y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['https://djngo-attendance.onrender.com']
+ALLOWED_HOSTS = ['djngo-attendance.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
