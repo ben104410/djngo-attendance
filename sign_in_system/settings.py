@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-bhy5wkp17_#3v*lkn@^$yu*n6vp6vz#5sx9!3=!)$^698bx#py')
 
 
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['djngo-attendance.onrender.com']
 
@@ -51,10 +51,9 @@ ROOT_URLCONF = 'sign_in_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # This points to a 'templates' folder at the project root,
-        # which is a more standard and less error-prone location.
-        # Make sure your templates are in 'sign_in_system/templates/'.
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        # This telgnls Django to look for templates in the 'templates' folder
+        # inside your project's configuration directory.
+        'DIRS': [os.path.join(BASE_DIR, 'sign_in_system', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
