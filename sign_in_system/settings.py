@@ -12,7 +12,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-bhy5wkp17_#3v*lkn@^$y
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['djngo-attendance.onrender.com']  
+ALLOWED_HOSTS = ['djngo-attendance.onrender.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -51,7 +51,10 @@ ROOT_URLCONF = 'sign_in_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'sign_in_system', 'templates')],
+        # This points to a 'templates' folder at the project root,
+        # which is a more standard and less error-prone location.
+        # Make sure your templates are in 'sign_in_system/templates/'.
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
