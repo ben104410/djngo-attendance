@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from  sign_in_system import views
+from sign_in_system import views
+from users import views as user_views
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -25,4 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('attendance/', include('attendance.urls')),
     path('users/', include('users.urls')),
+    path('register/', user_views.register, name='register'),
+    path('register', user_views.register),  # handle /register without slash
 ]

@@ -10,7 +10,7 @@ User = get_user_model()
 
 
 # Render registration form & handle user creation
-def register_user(request):
+def register(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')

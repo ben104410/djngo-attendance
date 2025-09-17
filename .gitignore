@@ -1,0 +1,5 @@
+# Build artifacts
+staticfiles/
+
+# Python
+__pycache__/
